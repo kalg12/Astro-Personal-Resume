@@ -1,0 +1,27 @@
+---
+import Card from '../Card.astro'
+import { Button } from '../ui/button'
+import { EXPERIENCE } from '../../lib/constants'
+---
+
+<Card colSpan="md:col-span-1" rowSpan="md:row-span-2" title="Experiencia">
+  <div class="mt-2 space-y-4">
+    {
+      EXPERIENCE.slice(0, 3).map((exp) => (
+        <div>
+          <div class="flex flex-col">
+            <span class="font-bold">{exp.company}</span>
+            <span class="text-sm text-muted-foreground">
+              {exp.start} - {exp.end}
+            </span>
+            <span class="font-semibold">{exp.position}</span>
+            <p class="mt-1 text-sm text-foreground">{exp.tasks[0]}</p>
+          </div>
+        </div>
+      ))
+    }
+    <a href="/work">
+      <Button variant="link" className="pl-0"> Ver Más </Button>
+    </a>
+  </div>
+</Card>

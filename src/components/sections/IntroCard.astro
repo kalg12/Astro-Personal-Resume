@@ -1,0 +1,68 @@
+---
+import Card from '../Card.astro'
+import { Button } from '../ui/button'
+import { LINKS } from '../../lib/constants'
+import { Linkedin, Github, Mail } from 'lucide-react'
+---
+
+<Card colSpan="md:col-span-3" rowSpan="md:row-span-4">
+  <div class="flex h-full w-full">
+    <div class="flex flex-col justify-between gap-4 md:max-h-[300px]">
+      <div class="flex h-full flex-col">
+        <h6 class="m-0 text-sm font-light text-muted-foreground">
+          Bienvenido ✌️
+        </h6>
+        <p class="m-0 text-xl font-light">
+          Hola, soy <b class="font-bold">Kevin Armando Luciano García</b>, un
+          Desarrollador Web, apasionado por la tecnología, la programación y la
+          educación. Me gusta estar al día con las últimas tendencias en el
+          mundo del desarrollo. Y enseñar a otros lo que he aprendido.
+        </p>
+      </div>
+      <div class="flex gap-4">
+        <a href={LINKS.github} aria-label="github profile" target="_blank">
+          <Button aria-label="github profile">
+            <Github />
+            <span class="sr-only">Perfil GitHub</span>
+          </Button>
+        </a>
+        <a href={LINKS.linkedin} aria-label="linkeding profile" target="_blank">
+          <Button aria-label="linkedin profile">
+            <Linkedin />
+            <span class="sr-only">Perfil Linkedin</span>
+          </Button>
+        </a>
+        <a href={LINKS.mail} aria-label="mail profile" target="_blank">
+          <Button>
+            <Mail />
+            <span class="sr-only">Email</span>
+          </Button>
+        </a>
+      </div>
+    </div>
+    <img
+      width="300"
+      height="300"
+      src="/me_cv.png"
+      class="animate-bounce-subtle pointer-events-none absolute bottom-[-20px] right-[-110px] z-[-1] max-h-[300px] w-auto select-none opacity-50 md:relative md:bottom-auto md:right-auto md:z-auto md:opacity-100"
+      alt="memoji de kevin luciano"
+      style="animation: bounce-subtle 4s ease-in-out infinite;"
+    />
+  </div>
+</Card>
+
+<style>
+  @keyframes bounce-subtle {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+
+  .animate-bounce-subtle {
+    animation: bounce-subtle 3s ease-in-out infinite;
+  }
+</style>
