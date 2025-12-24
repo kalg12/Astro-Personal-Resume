@@ -1,13 +1,14 @@
 ---
 import Card from '../Card.astro'
 import { Badge } from '../ui/badge'
-import { STUDIES } from '../../lib/constants'
+
+const { studies, title } = Astro.props
 ---
 
-<Card colSpan="md:col-span-1" rowSpan="md:row-span-1" title="Estudios">
+<Card colSpan="md:col-span-1" rowSpan="md:row-span-1" title={title}>
   <div class="mt-2 flex w-full flex-wrap items-center justify-center gap-2">
     {
-      STUDIES.map((study) => (
+      studies.map((study: any) => (
         <a href={study.link} target="__blank">
           <Badge variant="outline">{study.institution}</Badge>
         </a>

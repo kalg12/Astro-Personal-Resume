@@ -2,11 +2,19 @@
 import { File } from 'lucide-react'
 import Card from '../Card.astro'
 import { Button } from '../ui/button'
+import { getLangFromUrl, useTranslations } from '@/lib/i18n'
 
-const PDF = '/KALG CV Español.pdf'
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
+
+const PDF = lang === 'es' ? '/KALG CV Español.pdf' : '/KALG CV En.pdf'
 ---
 
-<Card colSpan="md:col-span-1" rowSpan="md:row-span-4" title="CV">
+<Card
+  colSpan="md:col-span-1"
+  rowSpan="md:row-span-4"
+  title={t('cv.title')}
+>
   <div class="mt-4 flex w-full justify-center">
     <div
       class="card card-compact w-full max-w-lg gap-1 border-[oklch(var(--p))] transition-all"
@@ -17,13 +25,12 @@ const PDF = '/KALG CV Español.pdf'
       </figure>
       <div class="mt-2 flex flex-col gap-1">
         <p class="text-sm text-muted-foreground">
-          Puedes ver y descargar mi currículum haciendo clic en el botón de
-          abajo
+          {t('cv.p')}
         </p>
         <div class="card-actions mt-2 flex w-full items-center justify-center">
           <a target="_blank" href={PDF}>
             <Button>
-              Descargar CV
+              {t('cv.button')}
               <File />
             </Button>
           </a>

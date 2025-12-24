@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import moment from 'moment-timezone'
 
-const Timezone = ({ timezone }: any) => {
+const Timezone = ({ timezone, text }: any) => {
   const [dateTime, setDateTime] = useState('')
 
   useEffect(() => {
@@ -16,7 +16,7 @@ const Timezone = ({ timezone }: any) => {
   return (
     <div>
       <p>{dateTime}</p>
-      <p className="text-sm text-gray-500">México Centro</p>
+      <p className="text-sm text-gray-500">{text}</p>
     </div>
   )
 }

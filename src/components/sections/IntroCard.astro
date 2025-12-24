@@ -3,6 +3,10 @@ import Card from '../Card.astro'
 import { Button } from '../ui/button'
 import { LINKS } from '../../lib/constants'
 import { Linkedin, Github, Mail } from 'lucide-react'
+import { getLangFromUrl, useTranslations } from '@/lib/i18n'
+
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
 ---
 
 <Card colSpan="md:col-span-3" rowSpan="md:row-span-4">
@@ -10,32 +14,30 @@ import { Linkedin, Github, Mail } from 'lucide-react'
     <div class="flex flex-col justify-between gap-4 md:max-h-[300px]">
       <div class="flex h-full flex-col">
         <h6 class="m-0 text-sm font-light text-muted-foreground">
-          Bienvenido ✌️
+          {t('intro.welcome')}
         </h6>
         <p class="m-0 text-xl font-light">
-          Hola, soy <b class="font-bold">Kevin Armando Luciano García</b>, un
-          Desarrollador Web, apasionado por la tecnología, la programación y la
-          educación. Me gusta estar al día con las últimas tendencias en el
-          mundo del desarrollo. Y enseñar a otros lo que he aprendido.
+          {t('intro.p1')} <b class="font-bold">Kevin Armando Luciano García</b>
+          {t('intro.p2')}
         </p>
       </div>
       <div class="flex gap-4">
         <a href={LINKS.github} aria-label="github profile" target="_blank">
           <Button aria-label="github profile">
             <Github />
-            <span class="sr-only">Perfil GitHub</span>
+            <span class="sr-only">{t('intro.github.sr')}</span>
           </Button>
         </a>
         <a href={LINKS.linkedin} aria-label="linkeding profile" target="_blank">
           <Button aria-label="linkedin profile">
             <Linkedin />
-            <span class="sr-only">Perfil Linkedin</span>
+            <span class="sr-only">{t('intro.linkedin.sr')}</span>
           </Button>
         </a>
         <a href={LINKS.mail} aria-label="mail profile" target="_blank">
           <Button>
             <Mail />
-            <span class="sr-only">Email</span>
+            <span class="sr-only">{t('intro.mail.sr')}</span>
           </Button>
         </a>
       </div>

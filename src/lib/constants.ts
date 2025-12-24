@@ -1,4 +1,4 @@
-import type { Site, Page } from './types'
+import type { Project } from './types'
 
 export const loaderAnimation = [
   '.loader',
@@ -13,98 +13,218 @@ export const LINKS = {
   instagram: 'https://www.instagram.com/kalg12/',
 }
 
-// Global
-export const SITE: Site = {
-  TITLE: 'Kevin Luciano - Portafolio',
-  DESCRIPTION:
-    'Bienvenido al portafolio de Kevin Luciano, desarrollador full stack apasionado por la tecnología.',
-  AUTHOR: 'Kevin Luciano',
-}
-
-// Work Page
-export const WORK: Page = {
-  TITLE: 'Trabajo',
-  DESCRIPTION: 'Lugares donde he trabajado.',
-}
-
-// Blog Page
-export const BLOG: Page = {
-  TITLE: 'Blog',
-  DESCRIPTION: 'Escritos sobre temas que me apasionan.',
-}
-
-// Projects Page
-export const PROJECTS: Page = {
-  TITLE: 'Proyectos',
-  DESCRIPTION: 'Proyectos recientes en los que he trabajado.',
-}
-
-// Search Page
-export const SEARCH: Page = {
-  TITLE: 'Buscar',
-  DESCRIPTION: 'Buscar todas las publicaciones y proyectos por palabra clave.',
-}
-
 // Study Page
-export const STUDIES = [
-  {
-    title: 'Ingeniería en Sistemas Computacionales',
-    institution: 'Universidad Central',
-    link: 'https://www.ucentral.edu.co/',
-    date: '2019 - 2027',
-  },
-  {
-    title: '...',
-    institution: 'Platzi',
-    link: 'https://platzi.com/',
-    date: '2018 - 2022',
-  },
-  {
-    title: '...',
-    institution: 'Udemy',
-    link: 'https://www.udemy.com/',
-    date: '2018 - 2022',
-  },
-  {
-    title: '...',
-    institution: 'Youtube',
-    link: 'https://www.youtube.com/@midulive',
-    date: '2018 - 2022',
-  },
-  {
-    title: 'Artista Tatuador',
-    institution: 'Tattoo Academy',
-    link: 'https://www.instagram.com/tattoodcacademy/',
-    date: '2024 - 2025',
-  },
-]
+export const STUDIES = {
+  es: [
+    {
+      title: 'Ingeniería en Sistemas Computacionales',
+      institution: 'Universidad Central',
+      link: 'https://www.ucentral.edu.co/',
+      date: '2019 - 2027',
+    },
+    {
+      title: '...',
+      institution: 'Platzi',
+      link: 'https://platzi.com/',
+      date: '2018 - 2022',
+    },
+    {
+      title: '...',
+      institution: 'Udemy',
+      link: 'https://www.udemy.com/',
+      date: '2018 - 2022',
+    },
+    {
+      title: '...',
+      institution: 'Youtube',
+      link: 'https://www.youtube.com/@midulive',
+      date: '2018 - 2022',
+    },
+    {
+      title: 'Artista Tatuador',
+      institution: 'Tattoo Academy',
+      link: 'https://www.instagram.com/tattoodcacademy/',
+      date: '2024 - 2025',
+    },
+  ],
+  en: [
+    {
+      title: 'Computer Systems Engineering',
+      institution: 'Central University',
+      link: 'https://www.ucentral.edu.co/',
+      date: '2019 - 2027',
+    },
+    {
+      title: '...',
+      institution: 'Platzi',
+      link: 'https://platzi.com/',
+      date: '2018 - 2022',
+    },
+    {
+      title: '...',
+      institution: 'Udemy',
+      link: 'https://www.udemy.com/',
+      date: '2018 - 2022',
+    },
+    {
+      title: '...',
+      institution: 'Youtube',
+      link: 'https://www.youtube.com/@midulive',
+      date: '2018 - 2022',
+    },
+    {
+      title: 'Tattoo Artist',
+      institution: 'Tattoo Academy',
+      link: 'https://www.instagram.com/tattoodcacademy/',
+      date: '2024 - 2025',
+    },
+  ],
+}
 
-export const EXPERIENCE = [
+export const EXPERIENCE = {
+  es: [
+    {
+      company: 'UCAMP',
+      position: 'Coach Instructor - Desarrollo Web JavaScript',
+      start: '2021',
+      end: 'Junio 2025',
+      tasks: [
+        'Impartí cursos de desarrollo web, desde HTML y CSS hasta JavaScript avanzado. Asesoré a estudiantes y fomenté habilidades prácticas en proyectos modernos.',
+      ],
+    },
+    {
+      company: 'Onikom',
+      position: 'Consultor TI y Soporte',
+      start: '2022',
+      end: 'Jun 2025',
+      tasks: [
+        'Administración de la plataforma Moodle, soporte técnico y restauración de servicios. Gestión de VPS en GCP y AWS para asegurar la operatividad.',
+      ],
+    },
+    {
+      company: 'Acarentals',
+      position: 'Desarrollador Web y Administrador de Infraestructura IT',
+      start: '2015',
+      end: 'Oct 2022',
+      tasks: [
+        'Desarrollo y mantenimiento del sitio web, creación de APIs internas y administración de servidores. Soporte técnico y gestión de respaldos y redes sociales.',
+      ],
+    },
+  ],
+  en: [
+    {
+      company: 'UCAMP',
+      position: 'Coach Instructor - JavaScript Web Development',
+      start: '2021',
+      end: 'June 2025',
+      tasks: [
+        'I taught web development courses, from HTML and CSS to advanced JavaScript. I advised students and fostered practical skills in modern projects.',
+      ],
+    },
+    {
+      company: 'Onikom',
+      position: 'IT Consultant and Support',
+      start: '2022',
+      end: 'June 2025',
+      tasks: [
+        'Moodle platform administration, technical support, and service restoration. Management of VPS on GCP and AWS to ensure operability.',
+      ],
+    },
+    {
+      company: 'Acarentals',
+      position: 'Web Developer and IT Infrastructure Administrator',
+      start: '2015',
+      end: 'Oct 2022',
+      tasks: [
+        'Development and maintenance of the website, creation of internal APIs, and server administration. Technical support and management of backups and social networks.',
+      ],
+    },
+  ],
+}
+
+export const PROJECTS_DATA: Project[] = [
   {
-    company: 'UCAMP',
-    position: 'Coach Instructor - Desarrollo Web JavaScript',
-    start: '2021',
-    end: 'Junio 2025',
-    tasks: [
-      'Impartí cursos de desarrollo web, desde HTML y CSS hasta JavaScript avanzado. Asesoré a estudiantes y fomenté habilidades prácticas en proyectos modernos.',
-    ],
+    name: {
+      es: 'Nombre del Proyecto 1',
+      en: 'Project Name 1',
+    },
+    description: {
+      es: 'Esta es una breve descripción de mi proyecto. Destaca lo que hace y por qué es interesante para un reclutador.',
+      en: 'This is a short description of my project. It highlights what it does and why it is interesting for a recruiter.',
+    },
+    image: '/me_cv.png',
+    tags: ['Astro', 'TypeScript', 'Tailwind CSS', 'React'],
+    githubUrl: 'https://github.com/tu_usuario/tu_repo',
+    liveUrl: 'https://enlace_a_tu_proyecto.com',
   },
   {
-    company: 'Onikom',
-    position: 'Consultor TI y Soporte',
-    start: '2022',
-    end: 'Jun 2025',
-    tasks: [
-      'Administración de la plataforma Moodle, soporte técnico y restauración de servicios. Gestión de VPS en GCP y AWS para asegurar la operatividad.',
-    ],
+    name: {
+      es: 'Nombre del Proyecto 2',
+      en: 'Project Name 2',
+    },
+    description: {
+      es: 'Este proyecto soluciona un problema real. Aquí explico cómo y qué tecnologías usé.',
+      en: 'This project solves a real problem. Here I explain how and what technologies I used.',
+    },
+    image: '/me_cv.png',
+    tags: ['Next.js', 'Node.js', 'PostgreSQL', 'Prisma'],
+    githubUrl: 'https://github.com/tu_usuario/tu_repo',
+    liveUrl: 'https://enlace_a_tu_proyecto.com',
   },
   {
-    company: 'Acarentals',
-    position: 'Desarrollador Web y Administrador de Infraestructura IT',
-    start: '2015',
-    end: 'Oct 2022',
-    tasks: [
-      'Desarrollo y mantenimiento del sitio web, creación de APIs internas y administración de servidores. Soporte técnico y gestión de respaldos y redes sociales.',
-    ],
+    name: {
+      es: 'Nombre del Proyecto 3',
+      en: 'Project Name 3',
+    },
+    description: {
+      es: 'Aquí demuestro mis habilidades en el desarrollo de APIs. Este proyecto es un backend robusto y escalable.',
+      en: 'Here I demonstrate my skills in API development. This project is a robust and scalable backend.',
+    },
+    image: '/me_cv.png',
+    tags: ['NestJS', 'TypeScript', 'MongoDB', 'GraphQL'],
+    githubUrl: 'https://github.com/tu_usuario/tu_repo',
+    liveUrl: 'https://enlace_a_tu_proyecto.com',
+  },
+  {
+    name: {
+      es: 'Nombre del Proyecto 4',
+      en: 'Project Name 4',
+    },
+    description: {
+      es: 'Un proyecto personal que me apasiona. Muestra mi creatividad y mi capacidad para aprender nuevas tecnologías.',
+      en: 'A personal project that I am passionate about. It shows my creativity and my ability to learn new technologies.',
+    },
+    image: '/me_cv.png',
+    tags: ['SvelteKit', 'Firebase', 'Vite'],
+    githubUrl: 'https://github.com/tu_usuario/tu_repo',
+    liveUrl: 'https://enlace_a_tu_proyecto.com',
+  },
+  {
+    name: {
+      es: 'Nombre del Proyecto 5',
+      en: 'Project Name 5',
+    },
+    description: {
+      es: 'Colaboración en un proyecto de código abierto. Demuestra mi capacidad para trabajar en equipo y contribuir a la comunidad.',
+      en: 'Collaboration in an open source project. It demonstrates my ability to work in a team and contribute to the community.',
+    },
+    image: '/me_cv.png',
+    tags: ['Python', 'Django', 'React', 'Docker'],
+    githubUrl: 'https://github.com/tu_usuario/tu_repo',
+    liveUrl: 'https://enlace_a_tu_proyecto.com',
+  },
+  {
+    name: {
+      es: 'Nombre del Proyecto 6',
+      en: 'Project Name 6',
+    },
+    description: {
+      es: 'Un clon de una aplicación popular para practicar y demostrar mis habilidades. Aquí explico los retos que superé.',
+      en: 'A clone of a popular application to practice and demonstrate my skills. Here I explain the challenges I overcame.',
+    },
+    image: '/me_cv.png',
+    tags: ['Vue.js', 'Nuxt.js', 'Supabase'],
+    githubUrl: 'https://github.com/tu_usuario/tu_repo',
+    liveUrl: 'https://enlace_a_tu_proyecto.com',
   },
 ]

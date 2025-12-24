@@ -1,15 +1,22 @@
 ---
 import Card from '../Card.astro'
+import { getLangFromUrl, useTranslations } from '@/lib/i18n'
+
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
 ---
 
-<Card colSpan="md:col-span-1" rowSpan="md:row-span-6" title="Sobre mi">
+<Card
+  colSpan="md:col-span-1"
+  rowSpan="md:row-span-6"
+  title={t('aboutMe.title')}
+>
   <div class="flex flex-col gap-2">
     <p class="text-sm font-light">
-      Me considero una persona con mucha energía, capaz de transmitir a otros mi
-      conocimiento y aportar a las necesidades de una empresa.
+      {t('aboutMe.p1')}
       <br />
       <br />
-      Las herramientas que más uso:
+      {t('aboutMe.tools.title')}
       <ul class="list-inside list-disc">
         <li>JavaScript</li>
         <li>Typescript</li>
@@ -24,8 +31,7 @@ import Card from '../Card.astro'
       </ul>
     </p>
     <p class="text-sm font-light">
-      Además de la programación, me gusta mucho practicar deporte, como el
-      fútbol y el básquetbol. Leer y escuchar algunos podcast en inglés.
+      {t('aboutMe.hobbies')}
     </p>
   </div>
 </Card>

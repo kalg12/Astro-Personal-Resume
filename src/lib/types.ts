@@ -18,3 +18,18 @@ export type Socials = {
   TEXT: string
   HREF: string
 }[]
+
+export interface Project {
+  name: {
+    es: string
+    en: string
+  }
+  description: {
+    es: string
+    en: string
+  }
+  image: string
+  tags: string[]
+  githubUrl?: string
+  liveUrl?: string
+}

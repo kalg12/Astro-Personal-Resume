@@ -1,32 +1,58 @@
 ---
 import { Card as ShadcnCard } from './ui/card'
+import { Badge } from './ui/badge'
+import { Github, Globe } from 'lucide-react'
 
 const {
-  as: Tag = 'a',
   class: className,
-  href,
   heading,
   subheading,
   imagePath,
   altText,
+  tags,
+  githubUrl,
+  liveUrl,
 } = Astro.props
 ---
 
-<Tag href={href} class={`${className}`} `>
-  <ShadcnCard
-    className={`transfor-y-[-40%] align-start perspective-1200 group relative flex-none transform justify-start overflow-hidden shadow-lg transition duration-75 ease-in-out ${href ? 'cursor-pointer hover:border-primary' : ''} `}
-  >
-    <img
-      src={imagePath}
-      alt={altText}
-      class="h-48 w-full rounded-2xl rounded-bl-none rounded-br-none object-cover"
-      loading="eager"
-    />
-    <div class="flex flex-col gap-y-0.5 px-5 py-4">
-      <h1 class="text-lg font-medium">{heading}</h1>
-      <h2 class="text-muted-foreground">{subheading}</h2>
+<ShadcnCard
+  class={`flex flex-col overflow-hidden shadow-lg transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-1 ${className}`}
+>
+  <img
+    src={imagePath}
+    alt={altText}
+    class="h-48 w-full object-cover"
+    loading="lazy"
+  />
+  <div class="flex flex-col flex-grow p-5">
+    <h1 class="text-xl font-bold">{heading}</h1>
+    <p class="text-muted-foreground mt-2 flex-grow">{subheading}</p>
+    <div class="mt-4 flex flex-wrap gap-2">
+      {tags?.map((tag: string) => <Badge variant="secondary">{tag}</Badge>)}
     </div>
-
-    <slot />
-  </ShadcnCard>
-</Tag>
+  </div>
+  <div class="flex justify-end gap-4 p-5 pt-0">
+    {githubUrl && (
+      <a
+        href={githubUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-muted-foreground hover:text-foreground"
+        aria-label="GitHub repository"
+      >
+        <Github size={20} />
+      </a>
+    )}
+    {liveUrl && (
+      <a
+        href={liveUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-muted-foreground hover:text-foreground"
+        aria-label="Live demo"
+      >
+        <Globe size={20} />
+      </a>
+    )}
+  </div>
+</ShadcnCard>

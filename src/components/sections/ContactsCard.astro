@@ -1,20 +1,24 @@
 ---
 import Card from '../Card.astro'
 import { LINKS } from '../../lib/constants'
+import { getLangFromUrl, useTranslations } from '@/lib/i18n'
+
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
 ---
 
 <Card colSpan="md:col-span-1" rowSpan="md:row-span-4">
   <div class="h-full">
     <header class="flex items-center">
-      <h1 class="text-xl font-bold text-foreground">¡Contáctame!</h1>
+      <h1 class="text-xl font-bold text-foreground">{t('contacts.header')}</h1>
     </header>
     <address class="mt-4 flex flex-col">
-      <h2 class="text-muted-foreground">Detalles de contacto</h2>
+      <h2 class="text-muted-foreground">{t('contacts.subtitle1')}</h2>
       <p>luciano19940@hotmail.com</p>
-      <p>Acapulco, Gro., Méx.</p>
+      <p>{t('contacts.p1')}</p>
     </address>
     <div class="mt-4 flex w-fit flex-col">
-      <h2 class="text-muted-foreground">Redes Sociales</h2>
+      <h2 class="text-muted-foreground">{t('contacts.subtitle2')}</h2>
       <ul>
         <li>
           <a href={LINKS.linkedin} target="_blank">Linkedin</a>

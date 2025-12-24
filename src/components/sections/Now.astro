@@ -1,19 +1,21 @@
 ---
 import Card from '../Card.astro'
 import Pulse from '../Pulse.astro'
+import { getLangFromUrl, useTranslations } from '@/lib/i18n'
+
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
 ---
 
 <Card colSpan="md:col-span-1" rowSpan="md:row-span-2">
   <div class="mb-2 flex w-full items-start justify-between">
     <div class="flex flex-col">
-      <h2>Ahora</h2>
-      <a href="https://sive.rs/nowff" target="_blank">
-        <span class="cursor-pointer text-xs text-muted-foreground"
-          >¿Qué hago actualmente?</span
-        >
-      </a>
+      <h2>{t('now.title')}</h2>
+      <span class="cursor-pointer text-xs text-muted-foreground"
+        >{t('now.subtitle')}</span
+      >
     </div>
     <Pulse />
   </div>
-  <p class="text-xs">Actualmente trabajando como freelancer</p>
+  <p class="text-xs">{t('now.p')}</p>
 </Card>

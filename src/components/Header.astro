@@ -1,6 +1,11 @@
 ---
 import { buttonVariants } from '../components/ui/button'
 import { ModeToggle } from '../components/ui/ThemeToggle'
+import { getLangFromUrl, useTranslations } from '@/lib/i18n'
+import { LanguageToggle } from '@/components/ui/LanguageToggle'
+
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
 ---
 
 <script is:inline>
@@ -24,9 +29,17 @@ import { ModeToggle } from '../components/ui/ThemeToggle'
     class="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0"
   >
     <div class="flex gap-6 md:gap-10">
-      <a href="/" class="flex items-center space-x-2">
+      <a href={`/${lang}/`} class="flex items-center space-x-2">
         <span class="inline-block font-bold">Kevin Luciano</span>
       </a>
+      <nav class="hidden md:flex items-center space-x-1">
+        <a
+          href={`/${lang}/portfolio`}
+          class={buttonVariants({ variant: 'ghost' })}
+        >
+          {t('nav.projects')}
+        </a>
+      </nav>
     </div>
     <div class="flex flex-1 items-center justify-end space-x-4">
       <nav class="flex items-center space-x-1">
@@ -36,9 +49,10 @@ import { ModeToggle } from '../components/ui/ThemeToggle'
           rel="noreferrer"
           class={buttonVariants({ variant: 'ghost' })}
         >
-          GitHub
+          {t('nav.github')}
         </a>
-        <ModeToggle transition:persist client:load />
+        <ModeToggle client:load />
+        <LanguageToggle lang={lang} client:load />
       </nav>
     </div>
   </div>

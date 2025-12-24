@@ -1,4 +1,8 @@
 ---
+import { getLangFromUrl, useTranslations } from '@/lib/i18n'
+
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
 const currentYear = new Date().getFullYear()
 ---
 
@@ -8,11 +12,11 @@ const currentYear = new Date().getFullYear()
   >
     <div class="text-center text-sm leading-loose text-muted-foreground">
       <p class="mb-2">
-        © {currentYear} KALG • Desarrollador Full Stack con pasión
+        {t('footer.p1').replace('{currentYear}', currentYear.toString())}
       </p>
       <p>
-        Construido con <span class="text-red-500">❤️</span> usando Astro y Tailwind
-        CSS. Plantilla creada por{' '}
+        {t('footer.p2.builtWith')} <span class="text-red-500">❤️</span> usando Astro y
+        Tailwind CSS. {t('footer.p2.templateBy')}{' '}
         <a
           href="https://github.com/BUE221"
           target="_blank"
@@ -21,7 +25,7 @@ const currentYear = new Date().getFullYear()
         >
           BUE221
         </a>
-        . Código fuente disponible en{' '}
+        . {t('footer.p2.sourceCode')}{' '}
         <a
           href="https://github.com/bue221"
           target="_blank"
