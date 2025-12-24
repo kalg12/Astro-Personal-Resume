@@ -9,6 +9,7 @@ export const ui = {
   es: {
     'nav.projects': 'Proyectos',
     'nav.github': 'GitHub',
+    'nav.linkedin': 'LinkedIn',
     'footer.madeWith': 'Hecho con',
     'site.title': 'Kevin Luciano - Portafolio',
     'site.description':
@@ -70,6 +71,7 @@ export const ui = {
   en: {
     'nav.projects': 'Projects',
     'nav.github': 'GitHub',
+    'nav.linkedin': 'LinkedIn',
     'footer.madeWith': 'Made with',
     'site.title': 'Kevin Luciano - Portfolio',
     'site.description':

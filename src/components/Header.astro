@@ -51,6 +51,14 @@ const t = useTranslations(lang)
         >
           {t('nav.github')}
         </a>
+        <a
+          href="https://www.linkedin.com/in/kalg12/"
+          target="_blank"
+          rel="noreferrer"
+          class={buttonVariants({ variant: 'ghost' })}
+        >
+          {t('nav.linkedin')}
+        </a>
         <ModeToggle client:load />
         <LanguageToggle lang={lang} client:load />
       </nav>
