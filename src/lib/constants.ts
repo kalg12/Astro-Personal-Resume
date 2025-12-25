@@ -17,10 +17,10 @@ export const LINKS = {
 export const STUDIES = {
   es: [
     {
-      title: 'Ingeniería en Sistemas Computacionales',
-      institution: 'Universidad Central',
-      link: 'https://www.ucentral.edu.co/',
-      date: '2019 - 2027',
+      title: 'Ingeniería en Sistemas de la Información y la Comunicación',
+      institution: 'UNID Campus Acapulco',
+      link: 'https://www.unid.talisis.com/campus/acapulco',
+      date: '2013 - 2016',
     },
     {
       title: '...',
@@ -49,10 +49,10 @@ export const STUDIES = {
   ],
   en: [
     {
-      title: 'Computer Systems Engineering',
-      institution: 'Central University',
-      link: 'https://www.ucentral.edu.co/',
-      date: '2019 - 2027',
+      title: 'Bachelor in Information Systems Engineering',
+      institution: 'UNID Campus Acapulco',
+      link: 'https://www.unid.talisis.com/campus/acapulco',
+      date: '2013 - 2016',
     },
     {
       title: '...',
