@@ -195,7 +195,7 @@ export const PROJECTS_DATA: Project[] = [
       en: 'Online learning platform based on Moodle. Customization and integration of plugins to enhance the educational and administrative experience. More than 600 active monthly users.',
     },
     image: '/projects-images/MoodleCetmar18.png',
-    tags: ['Moodle 3.8', 'PHP', 'MySQL', 'CSS', '3.8'],
+    tags: ['Moodle 3.8', 'PHP', 'MySQL', 'CSS'],
     liveUrl: 'https://fulltech.com.mx/eduvirtual/',
   },
 ]
