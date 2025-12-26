@@ -16,43 +16,47 @@ const {
 ---
 
 <ShadcnCard
-  class={`flex flex-col overflow-hidden shadow-lg transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-1 ${className}`}
+  className={`group flex flex-col overflow-hidden shadow-lg transition-all duration-300 ease-in-out hover:-translate-y-1 hover:scale-[1.01] hover:shadow-2xl ${className}`}
 >
   <img
     src={imagePath}
     alt={altText}
-    class="h-48 w-full object-cover"
+    class="h-48 w-full object-cover transition-transform duration-300 ease-out group-hover:scale-105"
     loading="lazy"
   />
-  <div class="flex flex-col flex-grow p-5">
+  <div class="flex flex-grow flex-col p-5">
     <h1 class="text-xl font-bold">{heading}</h1>
-    <p class="text-muted-foreground mt-2 flex-grow">{subheading}</p>
+    <p class="mt-2 flex-grow text-muted-foreground">{subheading}</p>
     <div class="mt-4 flex flex-wrap gap-2">
       {tags?.map((tag: string) => <Badge variant="secondary">{tag}</Badge>)}
     </div>
   </div>
   <div class="flex justify-end gap-4 p-5 pt-0">
-    {githubUrl && (
-      <a
-        href={githubUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        class="text-muted-foreground hover:text-foreground"
-        aria-label="GitHub repository"
-      >
-        <Github size={20} />
-      </a>
-    )}
-    {liveUrl && (
-      <a
-        href={liveUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        class="text-muted-foreground hover:text-foreground"
-        aria-label="Live demo"
-      >
-        <Globe size={20} />
-      </a>
-    )}
+    {
+      githubUrl && (
+        <a
+          href={githubUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-muted-foreground hover:text-foreground"
+          aria-label="GitHub repository"
+        >
+          <Github size={20} />
+        </a>
+      )
+    }
+    {
+      liveUrl && (
+        <a
+          href={liveUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-muted-foreground hover:text-foreground"
+          aria-label="Live demo"
+        >
+          <Globe size={20} />
+        </a>
+      )
+    }
   </div>
 </ShadcnCard>
