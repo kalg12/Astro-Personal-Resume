@@ -1,6 +1,7 @@
 ---
 import Card from '../Card.astro'
-import { getLangFromUrl, useTranslations } from '@/lib/i18n'
+import { getLangFromUrl, useTranslations } from '../../lib/i18n'
+import { LINKS } from '../../lib/constants'
 
 const lang = getLangFromUrl(Astro.url)
 const t = useTranslations(lang)
@@ -8,30 +9,72 @@ const t = useTranslations(lang)
 
 <Card
   colSpan="md:col-span-1"
-  rowSpan="md:row-span-6"
+  rowSpan="md:row-span-4"
   title={t('aboutMe.title')}
 >
-  <div class="flex flex-col gap-2">
-    <p class="text-sm font-light">
+  <div class="flex flex-col gap-5">
+    <!-- SOBRE MÍ -->
+    <p class="text-sm font-light leading-relaxed">
       {t('aboutMe.p1')}
-      <br />
-      <br />
-      {t('aboutMe.tools.title')}
-      <ul class="list-inside list-disc">
-        <li>JavaScript</li>
+    </p>
+
+    <!-- HERRAMIENTAS -->
+    <div class="text-sm font-light">
+      <p class="mb-2 font-medium">
+        {t('aboutMe.tools.title')}
+      </p>
+
+      <ul class="list-inside list-disc space-y-1">
         <li>Typescript</li>
+        <li>JavaScript</li>
         <li>Node JS</li>
-        <li>Next JS</li>
         <li>React</li>
+        <li>Next JS</li>
         <li>MySQL</li>
         <li>MongoDB</li>
         <li>Docker</li>
         <li>JAVA</li>
         <li>SpringBoot</li>
+        <li>PHP</li>
+        <li>Laravel</li>
+        <li>Python</li>
+        <li>LangChain</li>
+        <li>LangGraph</li>
       </ul>
-    </p>
-    <p class="text-sm font-light">
+    </div>
+
+    <!-- HOBBIES -->
+    <p class="text-sm font-light leading-relaxed">
       {t('aboutMe.hobbies')}
     </p>
+
+    <!-- GITHUB ACTIVITY -->
+    <div class="border-t border-border pt-4">
+      <div class="mb-2 flex items-center justify-between gap-3">
+        <p class="text-sm font-medium">
+          {t('aboutMe.github.title')}
+        </p>
+
+        <a
+          href={LINKS.github}
+          target="_blank"
+          rel="noopener"
+          class="text-xs text-muted-foreground underline-offset-4 hover:underline"
+        >
+          {t('aboutMe.github.cta')}
+        </a>
+      </div>
+
+      <p class="mb-3 text-xs text-muted-foreground">
+        {t('aboutMe.github.p')}
+      </p>
+
+      <img
+        src="/GitHub-Contributions-2025-kalg12.png"
+        alt={t('aboutMe.github.alt')}
+        class="w-full rounded-md border border-border/60 opacity-95 transition-opacity hover:opacity-100"
+        loading="lazy"
+      />
+    </div>
   </div>
 </Card>

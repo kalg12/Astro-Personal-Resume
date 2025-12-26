@@ -36,19 +36,19 @@ export const STUDIES = {
 export const EXPERIENCE = {
   es: [
     {
-      company: 'UCAMP',
+      company: 'UCAMP - Tiempo parcial',
       position: 'Coach Instructor - Desarrollo Web JavaScript',
       start: '2021',
-      end: 'Junio 2025',
+      end: 'Actualmente',
       tasks: [
-        'Impartí cursos de desarrollo web, desde HTML y CSS hasta JavaScript avanzado. Asesoré a estudiantes y fomenté habilidades prácticas en proyectos modernos.',
+        'Imparto cursos de Desarrollo Web, desde HTML y CSS hasta JavaScript avanzado. Asesoro a estudiantes y fomento habilidades prácticas en proyectos modernos.',
       ],
     },
     {
       company: 'Onikom',
       position: 'Consultor TI y Soporte',
       start: '2022',
-      end: 'Jun 2025',
+      end: 'Septiembre 2025',
       tasks: [
         'Administración de la plataforma Moodle, soporte técnico y restauración de servicios. Gestión de VPS en GCP y AWS para asegurar la operatividad.',
       ],
@@ -65,19 +65,19 @@ export const EXPERIENCE = {
   ],
   en: [
     {
-      company: 'UCAMP',
+      company: 'UCAMP- Part Time',
       position: 'Coach Instructor - JavaScript Web Development',
       start: '2021',
-      end: 'June 2025',
+      end: 'Present',
       tasks: [
-        'I taught web development courses, from HTML and CSS to advanced JavaScript. I advised students and fostered practical skills in modern projects.',
+        'I teach Web Development courses, from HTML and CSS to advanced JavaScript. I mentor students and foster practical skills in modern projects.',
       ],
     },
     {
       company: 'Onikom',
       position: 'IT Consultant and Support',
       start: '2022',
-      end: 'June 2025',
+      end: 'September 2025',
       tasks: [
         'Moodle platform administration, technical support, and service restoration. Management of VPS on GCP and AWS to ensure operability.',
       ],

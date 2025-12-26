@@ -21,7 +21,8 @@ export const ui = {
     'projects.title': 'Proyectos',
     'projects.description': 'Proyectos recientes en los que he trabajado.',
     'search.title': 'Buscar',
-    'search.description': 'Buscar todas las publicaciones y proyectos por palabra clave.',
+    'search.description':
+      'Buscar todas las publicaciones y proyectos por palabra clave.',
     'experience.title': 'Experiencia',
     'experience.seeMore': 'Ver Más',
     'studies.title': 'Estudios',
@@ -49,10 +50,10 @@ export const ui = {
     'intro.linkedin.sr': 'Perfil Linkedin',
     'intro.mail.sr': 'Email',
     'aboutMe.p1':
-      'Me considero una persona con mucha energía, capaz de transmitir a otros mi conocimiento y aportar a las necesidades de una empresa.',
+      'Me considero una persona con mucha energía, capaz de transmitir a otros mi conocimiento y aportar a las necesidades de una empresa. Trato de cada día programar, utilizando tecnologías nuevas, tratanto de estar al día con las últimas tendencias en el desarrollo web.',
     'aboutMe.tools.title': 'Las herramientas que más uso:',
     'aboutMe.hobbies':
-      'Además de la programación, me gusta mucho practicar deporte, como el fútbol y el básquetbol. Leer y escuchar algunos podcast en inglés.',
+      'Además de la programación, me gusta mucho practicar deporte, como el fútbol y el básquetbol. Actualmente dedico tiempo a correr, y me gusta escuchar podcast en inglés.',
     'now.subtitle': '¿Qué hago actualmente?',
     'now.p': 'Actualmente trabajando como freelancer',
     'cv.p':
@@ -67,6 +68,11 @@ export const ui = {
     'footer.p2.templateBy': 'Plantilla creada por',
     'footer.p2.sourceCode': 'Código fuente disponible en',
     'timezone.p': 'México Centro',
+    'aboutMe.github.title': 'Actividad en GitHub',
+    'aboutMe.github.p':
+      'Mantengo una participación constante en proyectos personales y profesionales.',
+    'aboutMe.github.alt': 'Gráfica de contribuciones en GitHub',
+    'aboutMe.github.cta': 'Ver perfil',
   },
   en: {
     'nav.projects': 'Projects',
@@ -111,10 +117,10 @@ export const ui = {
     'intro.linkedin.sr': 'Linkedin Profile',
     'intro.mail.sr': 'Email',
     'aboutMe.p1':
-      'I consider myself a person with a lot of energy, capable of transmitting my knowledge to others and contributing to the needs of a company.',
+      'I consider myself a very energetic person, capable of sharing my knowledge with others and contributing to the needs of a company. I try to code every day, using new technologies, trying to stay up to date with the latest trends in web development.',
     'aboutMe.tools.title': 'The tools I use the most:',
     'aboutMe.hobbies':
-      'In addition to programming, I really enjoy playing sports, such as soccer and basketball. Reading and listening to some podcasts in English.',
+      'Besides programming, I really enjoy playing sports, such as soccer and basketball. Currently, I dedicate time to running, and I like to listen to podcasts in English.',
     'now.subtitle': 'What am I currently doing?',
     'now.p': 'Currently working as a freelancer',
     'cv.p': 'You can view and download my resume by clicking the button below',
@@ -128,5 +134,10 @@ export const ui = {
     'footer.p2.templateBy': 'Template created by',
     'footer.p2.sourceCode': 'Source code available on',
     'timezone.p': 'Mexico Central',
+    'aboutMe.github.title': 'GitHub Activity',
+    'aboutMe.github.p':
+      'I keep a consistent contribution streak in personal and professional projects.',
+    'aboutMe.github.alt': 'GitHub contributions chart',
+    'aboutMe.github.cta': 'View profile',
   },
 } as const
