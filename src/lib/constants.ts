@@ -97,59 +97,64 @@ export const EXPERIENCE = {
 export const PROJECTS_DATA: Project[] = [
   {
     name: {
-      es: 'Nombre del Proyecto 1',
-      en: 'Project Name 1',
+      es: 'Mincoli',
+      en: 'Mincoli',
     },
     description: {
-      es: 'Esta es una breve descripción de mi proyecto. Destaca lo que hace y por qué es interesante para un reclutador.',
-      en: 'This is a short description of my project. It highlights what it does and why it is interesting for a recruiter.',
+      es: 'Tienda en línea desarrollada con Laravel, orientada a la venta de productos físicos, con administración de inventario, pedidos y usuarios desde un panel centralizado.',
+      en: 'Online store developed with Laravel, focused on selling physical products, with inventory, orders, and user management from a centralized panel.',
     },
-    image: '/me_cv.png',
-    tags: ['Astro', 'TypeScript', 'Tailwind CSS', 'React'],
-    githubUrl: 'https://github.com/tu_usuario/tu_repo',
+    image: '/projects-images/mincoli.png',
+    tags: ['Laravel', 'PHP', 'Blade', 'MySQL', 'Tailwind CSS'],
+    liveUrl: 'http://mincoli.com/',
+  },
+  {
+    name: {
+      es: 'Sistema de Desempeño Académico',
+      en: 'Academic Performance System',
+    },
+    description: {
+      es: 'Sistema que ofrece a los docentes llevar un control detallado del desempeño académico de sus estudiantes, facilitando la gestión de calificaciones y reportes.',
+      en: "System that provides teachers with a detailed control of their students' academic performance, facilitating the management of grades and reports.",
+    },
+    image: '/projects-images/DesempeñoAcademicoCetmar18.png',
+    tags: ['Next.js', 'Node.js', 'TypeScript', 'MySQL', 'Prisma'],
     liveUrl: 'https://enlace_a_tu_proyecto.com',
   },
   {
     name: {
-      es: 'Nombre del Proyecto 2',
-      en: 'Project Name 2',
+      es: 'Comerza - POS',
+      en: 'Comerza - POS',
     },
     description: {
-      es: 'Este proyecto soluciona un problema real. Aquí explico cómo y qué tecnologías usé.',
-      en: 'This project solves a real problem. Here I explain how and what technologies I used.',
+      es: 'Sistema de punto de venta (POS) desarrollado para facilitar las operaciones comerciales diarias de restaurantes y tiendas. Desarrollo Full Stack.',
+      en: 'Point of Sale (POS) system developed to facilitate the daily business operations of restaurants and stores.',
     },
-    image: '/me_cv.png',
-    tags: ['Next.js', 'Node.js', 'PostgreSQL', 'Prisma'],
-    githubUrl: 'https://github.com/tu_usuario/tu_repo',
-    liveUrl: 'https://enlace_a_tu_proyecto.com',
+    image: '/projects-images/ComerzaPOS.png',
+    tags: [
+      'NestJS',
+      'Shadcn UI',
+      'RabbitMQ',
+      'Docker',
+      'Swagger',
+      'Next.js',
+      'TypeScript',
+      'MySQL',
+    ],
+    liveUrl: 'https://pos-frontend-pearl.vercel.app/',
   },
   {
     name: {
-      es: 'Nombre del Proyecto 3',
-      en: 'Project Name 3',
+      es: 'Colegio CVT',
+      en: 'Colegio CVT',
     },
     description: {
-      es: 'Aquí demuestro mis habilidades en el desarrollo de APIs. Este proyecto es un backend robusto y escalable.',
-      en: 'Here I demonstrate my skills in API development. This project is a robust and scalable backend.',
+      es: 'Landing Page intitucional en línea. Desarrollada con Laravel y Tailwind CSS. En Backend se implementó un CMS personalizado para la gestión escolar.',
+      en: 'Online institutional landing page. Developed with Laravel and Tailwind CSS. A custom CMS was implemented in the backend for school management.',
     },
-    image: '/me_cv.png',
-    tags: ['NestJS', 'TypeScript', 'MongoDB', 'GraphQL'],
-    githubUrl: 'https://github.com/tu_usuario/tu_repo',
-    liveUrl: 'https://enlace_a_tu_proyecto.com',
-  },
-  {
-    name: {
-      es: 'Nombre del Proyecto 4',
-      en: 'Project Name 4',
-    },
-    description: {
-      es: 'Un proyecto personal que me apasiona. Muestra mi creatividad y mi capacidad para aprender nuevas tecnologías.',
-      en: 'A personal project that I am passionate about. It shows my creativity and my ability to learn new technologies.',
-    },
-    image: '/me_cv.png',
-    tags: ['SvelteKit', 'Firebase', 'Vite'],
-    githubUrl: 'https://github.com/tu_usuario/tu_repo',
-    liveUrl: 'https://enlace_a_tu_proyecto.com',
+    image: '/projects-images/ColegioCVT.png',
+    tags: ['Laravel', 'Blade', 'Tawilwind CSS', 'MySQL'],
+    liveUrl: 'https://colegiocvt.com.mx/',
   },
   {
     name: {
