@@ -22,30 +22,6 @@ export const STUDIES = {
       link: 'https://www.unid.talisis.com/campus/acapulco',
       date: '2013 - 2016',
     },
-    {
-      title: '...',
-      institution: 'Platzi',
-      link: 'https://platzi.com/',
-      date: '2018 - 2022',
-    },
-    {
-      title: '...',
-      institution: 'Udemy',
-      link: 'https://www.udemy.com/',
-      date: '2018 - 2022',
-    },
-    {
-      title: '...',
-      institution: 'Youtube',
-      link: 'https://www.youtube.com/@midulive',
-      date: '2018 - 2022',
-    },
-    {
-      title: 'Artista Tatuador',
-      institution: 'Tattoo Academy',
-      link: 'https://www.instagram.com/tattoodcacademy/',
-      date: '2024 - 2025',
-    },
   ],
   en: [
     {
@@ -53,30 +29,6 @@ export const STUDIES = {
       institution: 'UNID Campus Acapulco',
       link: 'https://www.unid.talisis.com/campus/acapulco',
       date: '2013 - 2016',
-    },
-    {
-      title: '...',
-      institution: 'Platzi',
-      link: 'https://platzi.com/',
-      date: '2018 - 2022',
-    },
-    {
-      title: '...',
-      institution: 'Udemy',
-      link: 'https://www.udemy.com/',
-      date: '2018 - 2022',
-    },
-    {
-      title: '...',
-      institution: 'Youtube',
-      link: 'https://www.youtube.com/@midulive',
-      date: '2018 - 2022',
-    },
-    {
-      title: 'Tattoo Artist',
-      institution: 'Tattoo Academy',
-      link: 'https://www.instagram.com/tattoodcacademy/',
-      date: '2024 - 2025',
     },
   ],
 }
