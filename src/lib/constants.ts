@@ -127,7 +127,14 @@ export const PROJECTS_DATA: Project[] = [
       en: 'Faculty platform that centralizes grades, reports, and alerts. Exports detailed reports and triggers Telegram notifications for timely follow-ups.',
     },
     image: '/projects-images/desempeno-academico.png',
-    tags: ['Next.js', 'Node.js', 'TypeScript', 'MySQL', 'Prisma', 'Telegram Bot API'],
+    tags: [
+      'Next.js',
+      'Node.js',
+      'TypeScript',
+      'MySQL',
+      'Prisma',
+      'Telegram Bot API',
+    ],
     liveUrl: 'https://enlace_a_tu_proyecto.com',
   },
   {
@@ -169,7 +176,16 @@ export const PROJECTS_DATA: Project[] = [
       en: 'Laravel-powered rental marketplace with filters by area/amenities. Admin panel to manage bookings, properties, and leads, optimized for local search.',
     },
     image: '/projects-images/SeRenta.png',
-    tags: ['Laravel', 'Blade', 'Tailwind CSS', 'MySQL', 'Google Analytics', 'i18n', 'SEO', 'Tawk.to'],
+    tags: [
+      'Laravel',
+      'Blade',
+      'Tailwind CSS',
+      'MySQL',
+      'Google Analytics',
+      'i18n',
+      'SEO',
+      'Tawk.to',
+    ],
     liveUrl: 'https://serenta.com/',
   },
   {
@@ -186,13 +202,13 @@ export const PROJECTS_DATA: Project[] = [
 
 export const CV_HIGHLIGHTS = {
   es: [
-    '5+ años construyendo sistemas en producción (POS, LMS, CMS, e-commerce).',
-    'Stack principal: Laravel, Next.js, Node.js, MySQL, Docker.',
+    '6+ años construyendo sistemas en producción (POS, LMS, CMS, e-commerce).',
+    'Stack principal: React, Next.js, Node.js, Laravel, Blade, Java, Spring Boot, Laravel, MySQL, Docker.',
     'End-to-end: backend, frontend, DevOps y acompañamiento a usuarios.',
   ],
   en: [
-    '5+ years building production systems (POS, LMS, CMS, e-commerce).',
-    'Core stack: Laravel, Next.js, Node.js, MySQL, Docker.',
+    '6+ years building production systems (POS, LMS, CMS, e-commerce).',
+    'Core stack: React, Next.js, Node.js, Laravel, Blade, Java, Spring Boot, Laravel, MySQL, Docker.',
     'End-to-end: backend, frontend, DevOps, and user onboarding.',
   ],
 }

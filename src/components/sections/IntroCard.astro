@@ -12,12 +12,26 @@ const highlights =
   lang === 'es'
     ? [
         'Sistemas en producción: POS, LMS, CMS y e-commerce.',
-        'Stack: Laravel, Next.js, Node.js, MySQL, Docker.',
+        'React',
+        'Next.js',
+        'Node.js',
+        'Laravel',
+        'MySQL',
+        'Docker.',
+        'Java',
+        'Spring Boot',
         'Me enfoco en entregar rápido, medible y listo para usuarios.',
       ]
     : [
         'Production systems: POS, LMS, CMS, and e-commerce.',
-        'Stack: Laravel, Next.js, Node.js, MySQL, Docker.',
+        'React',
+        'Next.js',
+        'Node.js',
+        'Laravel',
+        'MySQL',
+        'Docker.',
+        'Java',
+        'Spring Boot',
         'I ship fast, measurable, and user-ready products.',
       ]
 ---
@@ -38,10 +52,8 @@ const highlights =
         </p>
       </div>
 
-      <ul class="text-sm text-muted-foreground space-y-1">
-        {highlights.map((item) => (
-          <li>- {item}</li>
-        ))}
+      <ul class="space-y-1 text-sm text-muted-foreground">
+        {highlights.map((item) => <li>- {item}</li>)}
       </ul>
 
       <div class="flex flex-wrap gap-3">
