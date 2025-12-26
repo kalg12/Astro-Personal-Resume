@@ -1,14 +1,14 @@
 ---
 import Card from '../Card.astro'
 import Pulse from '../Pulse.astro'
-import { getLangFromUrl, useTranslations } from '@/lib/i18n'
+import { getLangFromUrl, useTranslations } from '../../lib/i18n'
 
 const lang = getLangFromUrl(Astro.url)
 const t = useTranslations(lang)
 ---
 
-<Card colSpan="md:col-span-1">
-  <div class="mb-2 flex w-full items-start justify-between">
+<Card colSpan="md:col-span-2" rowSpan="md:row-span-1">
+  <div class="mb-3 flex w-full items-start justify-between">
     <div class="flex flex-col">
       <h2>{t('now.title')}</h2>
       <span class="cursor-pointer text-xs text-muted-foreground"
@@ -17,5 +17,7 @@ const t = useTranslations(lang)
     </div>
     <Pulse />
   </div>
-  <p class="text-xs">{t('now.p')}</p>
+  <div class="space-y-3 text-sm leading-relaxed text-foreground">
+    <p>{t('now.p')}</p>
+  </div>
 </Card>
