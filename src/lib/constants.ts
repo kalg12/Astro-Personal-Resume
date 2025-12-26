@@ -41,7 +41,9 @@ export const EXPERIENCE = {
       start: '2021',
       end: 'Actualmente',
       tasks: [
-        'Imparto cursos de Desarrollo Web, desde HTML y CSS hasta JavaScript avanzado. Asesoro a estudiantes y fomento habilidades prácticas en proyectos modernos.',
+        'Imparto cursos de Desarrollo Web de HTML/CSS a JavaScript avanzado con proyectos prácticos.',
+        'Acompaño a estudiantes en la construcción de portafolios y resolución de bugs.',
+        'Estandarizo guías y retos para acelerar su curva de aprendizaje.',
       ],
     },
     {
@@ -50,7 +52,9 @@ export const EXPERIENCE = {
       start: '2022',
       end: 'Septiembre 2025',
       tasks: [
-        'Administración de la plataforma Moodle, soporte técnico y restauración de servicios. Gestión de VPS en GCP y AWS para asegurar la operatividad.',
+        'Administración de Moodle: actualizaciones, plugins y respaldo de datos.',
+        'Gestión de VPS en GCP y AWS (seguridad, monitoreo y recuperación).',
+        'Automatización de despliegues y documentación para continuidad operativa.',
       ],
     },
     {
@@ -59,7 +63,9 @@ export const EXPERIENCE = {
       start: '2015',
       end: 'Oct 2022',
       tasks: [
-        'Desarrollo y mantenimiento del sitio web, creación de APIs internas y administración de servidores. Soporte técnico y gestión de respaldos y redes sociales.',
+        'Desarrollo y mantenimiento web con Laravel, integraciones de pago y APIs internas.',
+        'Administración de servidores, respaldos y monitoreo de disponibilidad.',
+        'Soporte técnico y coordinación de activos digitales (correo, dominios, RRSS).',
       ],
     },
   ],
@@ -70,7 +76,9 @@ export const EXPERIENCE = {
       start: '2021',
       end: 'Present',
       tasks: [
-        'I teach Web Development courses, from HTML and CSS to advanced JavaScript. I mentor students and foster practical skills in modern projects.',
+        'Teach Web Development courses from HTML/CSS to advanced JavaScript with hands-on projects.',
+        'Mentor students through portfolio building and bug fixing.',
+        'Standardize guides and challenges to speed up learning curves.',
       ],
     },
     {
@@ -79,7 +87,9 @@ export const EXPERIENCE = {
       start: '2022',
       end: 'September 2025',
       tasks: [
-        'Moodle platform administration, technical support, and service restoration. Management of VPS on GCP and AWS to ensure operability.',
+        'Moodle administration: upgrades, plugins, and data backups.',
+        'VPS management on GCP and AWS (security, monitoring, and recovery).',
+        'Deployment automation and documentation to ensure uptime.',
       ],
     },
     {
@@ -88,7 +98,9 @@ export const EXPERIENCE = {
       start: '2015',
       end: 'Oct 2022',
       tasks: [
-        'Development and maintenance of the website, creation of internal APIs, and server administration. Technical support and management of backups and social networks.',
+        'Website development and maintenance with Laravel, payment integrations, and internal APIs.',
+        'Server administration, backups, and availability monitoring.',
+        'Technical support and coordination of digital assets (email, domains, social media).',
       ],
     },
   ],
@@ -96,13 +108,10 @@ export const EXPERIENCE = {
 
 export const PROJECTS_DATA: Project[] = [
   {
-    name: {
-      es: 'Mincoli',
-      en: 'Mincoli',
-    },
+    name: { es: 'Mincoli', en: 'Mincoli' },
     description: {
-      es: 'Tienda en línea desarrollada con Laravel, orientada a la venta de productos físicos, con administración de inventario, pedidos y usuarios desde un panel centralizado.',
-      en: 'Online store developed with Laravel, focused on selling physical products, with inventory, orders, and user management from a centralized panel.',
+      es: 'E-commerce en producción con Laravel. Incluye catálogo con variaciones de color/talla, control de inventario, pedidos y reportes en un panel único para el equipo de ventas.',
+      en: 'Production e-commerce built with Laravel. Catalog with color/size variants, inventory control, order tracking, and reporting in a single admin panel for the sales team.',
     },
     image: '/projects-images/mincoli.png',
     tags: ['Laravel', 'PHP', 'Blade', 'MySQL', 'Tailwind CSS'],
@@ -114,18 +123,11 @@ export const PROJECTS_DATA: Project[] = [
       en: 'Academic Performance System',
     },
     description: {
-      es: 'Sistema que ofrece a los docentes llevar un control detallado del desempeño académico de sus estudiantes, facilitando la gestión de calificaciones y reportes.',
-      en: "System that provides teachers with a detailed control of their students' academic performance, facilitating the management of grades and reports.",
+      es: 'Plataforma para docentes que centraliza calificaciones, reportes y alertas. Permite exportar informes y enviar notificaciones automáticas por Telegram para seguimiento oportuno.',
+      en: 'Faculty platform that centralizes grades, reports, and alerts. Exports detailed reports and triggers Telegram notifications for timely follow-ups.',
     },
-    image: '/projects-images/DesempeñoAcademicoCetmar18.png',
-    tags: [
-      'Next.js',
-      'Node.js',
-      'TypeScript',
-      'MySQL',
-      'Prisma',
-      'Telegram Bot API',
-    ],
+    image: '/projects-images/desempeno-academico.png',
+    tags: ['Next.js', 'Node.js', 'TypeScript', 'MySQL', 'Prisma', 'Telegram Bot API'],
     liveUrl: 'https://enlace_a_tu_proyecto.com',
   },
   {
@@ -134,8 +136,8 @@ export const PROJECTS_DATA: Project[] = [
       en: 'Comerza - POS',
     },
     description: {
-      es: 'Sistema de punto de venta (POS) desarrollado para facilitar las operaciones comerciales diarias de restaurantes y tiendas. Desarrollo Full Stack.',
-      en: 'Point of Sale (POS) system developed to facilitate the daily business operations of restaurants and stores.',
+      es: 'POS full stack para restaurantes/tiendas con ventas en tiempo real, sincronización por RabbitMQ y dashboard de operaciones. Incluye catálogo, corte de caja y emisión de tickets.',
+      en: 'Full-stack POS for restaurants/shops with real-time sales, RabbitMQ syncing, and an operations dashboard. Includes catalog, cash-out flow, and ticket generation.',
     },
     image: '/projects-images/ComerzaPOS.png',
     tags: [
@@ -151,47 +153,29 @@ export const PROJECTS_DATA: Project[] = [
     liveUrl: 'https://pos-frontend-pearl.vercel.app/',
   },
   {
-    name: {
-      es: 'Colegio CVT',
-      en: 'Colegio CVT',
-    },
+    name: { es: 'Colegio CVT', en: 'Colegio CVT' },
     description: {
-      es: 'Landing Page intitucional en línea. Desarrollada con Laravel y Tailwind CSS. En Backend se implementó un CMS personalizado para la gestión escolar: Administración de alumnos, profesores, cursos, pagos y reportes.',
-      en: 'Institutional landing page. Developed with Laravel and Tailwind CSS. A custom CMS was implemented in the backend for school management: Administration of students, teachers, courses, payments, and reports.',
+      es: 'Sitio institucional con Laravel + Tailwind y CMS a medida para la administración escolar. Gestión de alumnos, profesores, pagos y reportes desde un panel seguro usado por el staff.',
+      en: 'Institutional site with Laravel + Tailwind and a custom CMS for school operations. Staff manages students, teachers, payments, and reports from a secure admin panel.',
     },
     image: '/projects-images/ColegioCVT.png',
-    tags: ['Laravel', 'Blade', 'Tawilwind CSS', 'MySQL'],
+    tags: ['Laravel', 'Blade', 'Tailwind CSS', 'MySQL'],
     liveUrl: 'https://colegiocvt.com.mx/',
   },
   {
-    name: {
-      es: 'Se Renta',
-      en: 'Se Renta',
-    },
+    name: { es: 'Se Renta', en: 'Se Renta' },
     description: {
-      es: 'Sitio web de alquiler de propiedades en Acapulco. Desarrollado con Laravel, permite a los usuarios buscar, listar y gestionar propiedades en alquiler. Se creó un panel administrativo para la gestión de reservas y usuarios.',
-      en: 'Rental property website in Acapulco. Developed with Laravel, it allows users to search, list, and manage rental properties. An administrative panel was created for managing bookings and users.',
+      es: 'Marketplace de alquiler en Laravel con filtros por zona/amenidades. Panel administrativo para gestionar reservas, propiedades y leads, optimizado para posicionamiento local.',
+      en: 'Laravel-powered rental marketplace with filters by area/amenities. Admin panel to manage bookings, properties, and leads, optimized for local search.',
     },
     image: '/projects-images/SeRenta.png',
-    tags: [
-      'Laravel',
-      'Blade',
-      'Tawilwind CSS',
-      'MySQL',
-      'Google Analytics',
-      'i18n',
-      'SEO',
-      'Tawk.to',
-    ],
+    tags: ['Laravel', 'Blade', 'Tailwind CSS', 'MySQL', 'Google Analytics', 'i18n', 'SEO', 'Tawk.to'],
     liveUrl: 'https://serenta.com/',
   },
   {
-    name: {
-      es: 'Moodle LMS',
-      en: 'Moodle LMS',
-    },
+    name: { es: 'Moodle LMS', en: 'Moodle LMS' },
     description: {
-      es: 'Plataforma de aprendizaje en línea basada en Moodle. Personalización e integración de plugins para mejorar la experiencia educativa y administrativa. Personalización e integración de plugins para mejorar la experiencia educativa y administrativa. Más de 600 usuarios activos mensuales.',
+      es: 'Plataforma Moodle personalizada para cursos y evaluaciones en línea. Integración de plugins, automatización de respaldos y soporte a más de 600 usuarios activos mensuales.',
       en: 'Online learning platform based on Moodle. Customization and integration of plugins to enhance the educational and administrative experience. More than 600 active monthly users.',
     },
     image: '/projects-images/MoodleCetmar18.png',
@@ -199,3 +183,16 @@ export const PROJECTS_DATA: Project[] = [
     liveUrl: 'https://fulltech.com.mx/eduvirtual/',
   },
 ]
+
+export const CV_HIGHLIGHTS = {
+  es: [
+    '5+ años construyendo sistemas en producción (POS, LMS, CMS, e-commerce).',
+    'Stack principal: Laravel, Next.js, Node.js, MySQL, Docker.',
+    'End-to-end: backend, frontend, DevOps y acompañamiento a usuarios.',
+  ],
+  en: [
+    '5+ years building production systems (POS, LMS, CMS, e-commerce).',
+    'Core stack: Laravel, Next.js, Node.js, MySQL, Docker.',
+    'End-to-end: backend, frontend, DevOps, and user onboarding.',
+  ],
+}

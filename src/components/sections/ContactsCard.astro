@@ -2,6 +2,7 @@
 import Card from '../Card.astro'
 import { LINKS } from '../../lib/constants'
 import { getLangFromUrl, useTranslations } from '@/lib/i18n'
+import { Button } from '../ui/button'
 
 const lang = getLangFromUrl(Astro.url)
 const t = useTranslations(lang)
@@ -12,6 +13,12 @@ const t = useTranslations(lang)
     <header class="flex items-center">
       <h1 class="text-xl font-bold text-foreground">{t('contacts.header')}</h1>
     </header>
+    <p class="mt-1 text-sm text-muted-foreground">{t('contacts.ctaLine')}</p>
+    <div class="mt-3">
+      <a href={LINKS.mail}>
+        <Button>{LINKS.mail.replace('mailto:', '')}</Button>
+      </a>
+    </div>
     <address class="mt-4 flex flex-col">
       <h2 class="text-muted-foreground">{t('contacts.subtitle1')}</h2>
       <p>luciano19940@hotmail.com</p>

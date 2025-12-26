@@ -1,0 +1,29 @@
+---
+import Card from '../Card.astro'
+import { PROJECTS_DATA } from '@/lib/constants'
+import { getLangFromUrl } from '@/lib/i18n'
+
+const lang = getLangFromUrl(Astro.url)
+const projects = PROJECTS_DATA.slice(0, 3)
+---
+
+<Card colSpan="md:col-span-2" rowSpan="md:row-span-1" href={`/${lang}/portfolio`} title={lang === 'es' ? 'Portafolio & Proyectos' : 'Portfolio & Projects'}>
+  <div class="mt-2 grid grid-cols-1 gap-4 md:grid-cols-3">
+    {projects.map((project) => (
+      <div class="flex flex-col gap-2 rounded-lg border border-border/60 p-3">
+        <div class="aspect-video w-full overflow-hidden rounded-md border border-border/60">
+          <img
+            src={project.image}
+            alt={project.name[lang]}
+            class="h-full w-full object-cover"
+            loading="lazy"
+          />
+        </div>
+        <p class="text-sm font-semibold">{project.name[lang]}</p>
+        <p class="text-xs text-muted-foreground line-clamp-3">
+          {project.description[lang]}
+        </p>
+      </div>
+    ))}
+  </div>
+</Card>

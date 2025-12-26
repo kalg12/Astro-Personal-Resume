@@ -2,11 +2,24 @@
 import Card from '../Card.astro'
 import { Button } from '../ui/button'
 import { LINKS } from '../../lib/constants'
-import { Linkedin, Github, Mail } from 'lucide-react'
+import { Linkedin, Github, Mail, File, Send } from 'lucide-react'
 import { getLangFromUrl, useTranslations } from '../../lib/i18n'
 
 const lang = getLangFromUrl(Astro.url)
 const t = useTranslations(lang)
+const pdfLink = lang === 'es' ? '/KALG-CV-ES.pdf' : '/KALG-CV-EN.pdf'
+const highlights =
+  lang === 'es'
+    ? [
+        'Sistemas en producción: POS, LMS, CMS y e-commerce.',
+        'Stack: Laravel, Next.js, Node.js, MySQL, Docker.',
+        'Me enfoco en entregar rápido, medible y listo para usuarios.',
+      ]
+    : [
+        'Production systems: POS, LMS, CMS, and e-commerce.',
+        'Stack: Laravel, Next.js, Node.js, MySQL, Docker.',
+        'I ship fast, measurable, and user-ready products.',
+      ]
 ---
 
 <Card colSpan="md:col-span-3" rowSpan="md:row-span-4">
@@ -23,6 +36,27 @@ const t = useTranslations(lang)
           <b class="font-bold">Kevin Armando Luciano García</b>
           {t('intro.p2')}
         </p>
+      </div>
+
+      <ul class="text-sm text-muted-foreground space-y-1">
+        {highlights.map((item) => (
+          <li>- {item}</li>
+        ))}
+      </ul>
+
+      <div class="flex flex-wrap gap-3">
+        <a href={pdfLink} aria-label={t('intro.ctaPrimary')} target="_blank">
+          <Button aria-label={t('intro.ctaPrimary')}>
+            <File />
+            {t('intro.ctaPrimary')}
+          </Button>
+        </a>
+        <a href={LINKS.mail} aria-label={t('intro.ctaSecondary')}>
+          <Button variant="secondary" aria-label={t('intro.ctaSecondary')}>
+            <Send />
+            {t('intro.ctaSecondary')}
+          </Button>
+        </a>
       </div>
 
       <!-- SOCIAL BUTTONS -->

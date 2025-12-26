@@ -3,18 +3,29 @@ import { File } from 'lucide-react'
 import Card from '../Card.astro'
 import { Button } from '../ui/button'
 import { getLangFromUrl, useTranslations } from '@/lib/i18n'
+import { CV_HIGHLIGHTS } from '@/lib/constants'
 
 const lang = getLangFromUrl(Astro.url)
 const t = useTranslations(lang)
 
-const PDF = lang === 'es' ? '/KALG CV Español.pdf' : '/KALG CV En.pdf'
+const PDF = lang === 'es' ? '/KALG-CV-ES.pdf' : '/KALG-CV-EN.pdf'
+const highlights = CV_HIGHLIGHTS[lang]
 ---
 
 <Card
   colSpan="md:col-span-1"
-  rowSpan="md:row-span-4"
+  rowSpan="md:row-span-3"
   title={t('cv.title')}
 >
+  <div class="mb-3">
+    <p class="mb-2 text-sm font-medium">{t('cv.highlights.title')}</p>
+    <ul class="list-inside list-disc space-y-1 text-sm text-muted-foreground">
+      {highlights.map((item) => (
+        <li>{item}</li>
+      ))}
+    </ul>
+  </div>
+
   <div class="mt-4 flex w-full justify-center">
     <div
       class="card card-compact w-full max-w-lg gap-1 border-[oklch(var(--p))] transition-all"

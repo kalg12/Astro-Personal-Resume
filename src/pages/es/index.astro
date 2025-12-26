@@ -11,6 +11,7 @@ import ExperienceCard from '../../components/sections/ExperienceCard.astro'
 import StudyCard from '../../components/sections/StudyCard.astro'
 import { getLangFromUrl, useTranslations } from '../../lib/i18n'
 import { EXPERIENCE, STUDIES } from '../../lib/constants'
+import PortfolioPreview from '../../components/sections/PortfolioPreview.astro'
 
 const lang = getLangFromUrl(Astro.url)
 const t = useTranslations(lang)
@@ -63,7 +64,7 @@ const studies = STUDIES[lang]
     {/* Fila 2: CV, Ahora, Portafolio */}
     <CVCard />
     <Now />
-    <Card title={t('home.portfolioCard.title')} href={`/${lang}/portfolio`} />
+    <PortfolioPreview />
     {/* Fila 3: Experiencia (2 filas), Sobre mí, Estudios + Frase */}
     <div class="flex h-full flex-col md:row-span-2">
       <ExperienceCard

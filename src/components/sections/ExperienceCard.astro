@@ -16,7 +16,11 @@ const { experience, title, buttonText } = Astro.props
               {exp.start} - {exp.end}
             </span>
             <span class="font-semibold">{exp.position}</span>
-            <p class="mt-1 text-sm text-foreground">{exp.tasks[0]}</p>
+            <ul class="mt-2 list-inside list-disc space-y-1 text-sm text-foreground">
+              {exp.tasks.slice(0, 3).map((task: string) => (
+                <li>{task}</li>
+              ))}
+            </ul>
           </div>
         </div>
       ))
