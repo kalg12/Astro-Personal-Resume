@@ -135,7 +135,7 @@ export const PROJECTS_DATA: Project[] = [
       'Prisma',
       'Telegram Bot API',
     ],
-    liveUrl: 'https://enlace_a_tu_proyecto.com',
+    liveUrl: 'https://calificaciones-cetmar.vercel.app/',
   },
   {
     name: {
