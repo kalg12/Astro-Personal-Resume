@@ -20,6 +20,7 @@ export type Socials = {
 }[]
 
 export interface Project {
+  id: string
   name: {
     es: string
     en: string
@@ -29,7 +30,38 @@ export interface Project {
     en: string
   }
   image: string
+  images?: string[]
   tags: string[]
   githubUrl?: string
   liveUrl?: string
+  videoUrl?: string
+  videoDescription?: {
+    es: string
+    en: string
+  }
+  longDescription: {
+    es: string
+    en: string
+  }
+  challenges: {
+    es: string[]
+    en: string[]
+  }
+  features: {
+    es: string[]
+    en: string[]
+  }
+  technologies: {
+    frontend?: string[]
+    backend?: string[]
+    database?: string[]
+    devops?: string[]
+    other?: string[]
+  }
+  duration?: string
+  teamSize?: string
+  role?: {
+    es: string
+    en: string
+  }
 }

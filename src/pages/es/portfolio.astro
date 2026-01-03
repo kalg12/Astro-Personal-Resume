@@ -9,14 +9,11 @@ const lang = getLangFromUrl(Astro.url)
 const t = useTranslations(lang)
 ---
 
-<BaseLayout
-  title={t('projects.title')}
-  description={t('projects.description')}
->
+<BaseLayout title={t('projects.title')} description={t('projects.description')}>
   <main class="m-auto w-full max-w-6xl p-4">
     <h1 class="text-3xl font-bold">{t('projects.title')}</h1>
     <p class="text-muted-foreground">{t('projects.description')}</p>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+    <div class="mt-8 grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3">
       {
         PROJECTS_DATA.map((project) => (
           <ProjectCard
@@ -27,6 +24,7 @@ const t = useTranslations(lang)
             tags={project.tags}
             githubUrl={project.githubUrl}
             liveUrl={project.liveUrl}
+            projectId={project.id}
           />
         ))
       }

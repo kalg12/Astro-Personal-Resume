@@ -1,0 +1,29 @@
+---
+import { PROJECTS_DATA } from '../../../lib/constants'
+import BaseLayout from '../../../layouts/BaseLayout.astro'
+import ProjectDetail from '../../../components/ProjectDetail.astro'
+import { getLangFromUrl, useTranslations } from '../../../lib/i18n'
+
+export async function getStaticPaths() {
+  return PROJECTS_DATA.map((project) => ({
+    params: { slug: project.id },
+    props: { project },
+  }))
+}
+
+const { project } = Astro.props
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
+
+// Verificar si el proyecto existe
+if (!project) {
+  return Astro.redirect('/404')
+}
+---
+
+<BaseLayout
+  title={project.name[lang]}
+  description={project.description[lang]}
+>
+  <ProjectDetail project={project} lang={lang} t={t} />
+</BaseLayout>

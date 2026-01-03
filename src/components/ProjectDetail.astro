@@ -1,0 +1,230 @@
+---
+import { Card as ShadcnCard } from './ui/card'
+import { Badge } from './ui/badge'
+import { Button } from './ui/button'
+import { Github, Globe, Play, Calendar, Users, User, Clock, ArrowLeft } from 'lucide-react'
+
+interface Props {
+  project: any
+  lang: string
+  t: any
+}
+
+const { project, lang, t } = Astro.props
+---
+
+<div class="m-auto w-full max-w-6xl p-4">
+  <!-- Botón de regreso -->
+  <div class="mb-6">
+    <a href={`/${lang}/portfolio`} class="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
+      <ArrowLeft size={20} />
+      <span>{t('projects.backToPortfolio') || 'Back to Portfolio'}</span>
+    </a>
+  </div>
+
+  <!-- Header del proyecto -->
+  <div class="mb-8">
+    <div class="flex flex-col lg:flex-row gap-8">
+      <div class="lg:w-1/2">
+        <div class="relative overflow-hidden rounded-lg shadow-lg">
+          <img
+            src={project.image}
+            alt={project.name[lang]}
+            class="w-full h-96 object-cover"
+          />
+          {project.videoUrl && (
+            <div class="absolute inset-0 flex items-center justify-center bg-black/50 opacity-0 hover:opacity-100 transition-opacity">
+              <a
+                href={project.videoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="bg-white text-black p-4 rounded-full hover:bg-gray-200 transition-colors"
+              >
+                <Play size={24} />
+              </a>
+            </div>
+          )}
+        </div>
+        
+        <!-- Galería de imágenes -->
+        {project.images && project.images.length > 1 && (
+          <div class="grid grid-cols-4 gap-2 mt-4">
+            {project.images.slice(1, 5).map((image: string) => (
+              <img
+                src={image}
+                alt={project.name[lang]}
+                class="w-full h-24 object-cover rounded cursor-pointer hover:opacity-80 transition-opacity"
+              />
+            ))}
+          </div>
+        )}
+      </div>
+      
+      <div class="lg:w-1/2">
+        <h1 class="text-4xl font-bold mb-4">{project.name[lang]}</h1>
+        <p class="text-lg text-muted-foreground mb-6">{project.description[lang]}</p>
+        
+        <!-- Metadatos del proyecto -->
+        <div class="grid grid-cols-2 gap-4 mb-6">
+          {project.duration && (
+            <div class="flex items-center gap-2">
+              <Clock size={18} class="text-muted-foreground" />
+              <span class="text-sm">{project.duration}</span>
+            </div>
+          )}
+          {project.teamSize && (
+            <div class="flex items-center gap-2">
+              <Users size={18} class="text-muted-foreground" />
+              <span class="text-sm">{project.teamSize}</span>
+            </div>
+          )}
+          {project.role && (
+            <div class="flex items-center gap-2">
+              <User size={18} class="text-muted-foreground" />
+              <span class="text-sm">{project.role[lang]}</span>
+            </div>
+          )}
+        </div>
+        
+        <!-- Tags -->
+        <div class="flex flex-wrap gap-2 mb-6">
+          {project.tags?.map((tag: string) => (
+            <Badge variant="secondary">{tag}</Badge>
+          ))}
+        </div>
+        
+        <!-- Botones de acción -->
+        <div class="flex gap-4">
+          {project.liveUrl && (
+            <a
+              href={project.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2 rounded-md hover:bg-primary/90 transition-colors"
+            >
+              <Globe size={18} />
+              <span>{t('projects.liveDemo') || 'Live Demo'}</span>
+            </a>
+          )}
+          {project.githubUrl && (
+            <a
+              href={project.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 border border-border px-4 py-2 rounded-md hover:bg-accent transition-colors"
+            >
+              <Github size={18} />
+              <span>{t('projects.viewCode') || 'View Code'}</span>
+            </a>
+          )}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Descripción larga -->
+  <ShadcnCard class="p-6 mb-8">
+    <h2 class="text-2xl font-bold mb-4">{t('projects.overview') || 'Overview'}</h2>
+    <p class="text-muted-foreground leading-relaxed">{project.longDescription[lang]}</p>
+  </ShadcnCard>
+
+  <!-- Características -->
+  <ShadcnCard class="p-6 mb-8">
+    <h2 class="text-2xl font-bold mb-4">{t('projects.features') || 'Features'}</h2>
+    <ul class="grid grid-cols-1 md:grid-cols-2 gap-3">
+      {project.features[lang].map((feature: string) => (
+        <li class="flex items-start gap-2">
+          <span class="text-green-500 mt-1">✓</span>
+          <span class="text-muted-foreground">{feature}</span>
+        </li>
+      ))}
+    </ul>
+  </ShadcnCard>
+
+  <!-- Tecnologías -->
+  <ShadcnCard class="p-6 mb-8">
+    <h2 class="text-2xl font-bold mb-4">{t('projects.technologies') || 'Technologies'}</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {project.technologies.frontend && (
+        <div>
+          <h3 class="font-semibold mb-2 text-green-600">{t('projects.frontend') || 'Frontend'}</h3>
+          <div class="flex flex-wrap gap-2">
+            {project.technologies.frontend.map((tech: string) => (
+              <Badge variant="outline">{tech}</Badge>
+            ))}
+          </div>
+        </div>
+      )}
+      {project.technologies.backend && (
+        <div>
+          <h3 class="font-semibold mb-2 text-blue-600">{t('projects.backend') || 'Backend'}</h3>
+          <div class="flex flex-wrap gap-2">
+            {project.technologies.backend.map((tech: string) => (
+              <Badge variant="outline">{tech}</Badge>
+            ))}
+          </div>
+        </div>
+      )}
+      {project.technologies.database && (
+        <div>
+          <h3 class="font-semibold mb-2 text-orange-600">{t('projects.database') || 'Database'}</h3>
+          <div class="flex flex-wrap gap-2">
+            {project.technologies.database.map((tech: string) => (
+              <Badge variant="outline">{tech}</Badge>
+            ))}
+          </div>
+        </div>
+      )}
+      {project.technologies.devops && (
+        <div>
+          <h3 class="font-semibold mb-2 text-purple-600">{t('projects.devops') || 'DevOps'}</h3>
+          <div class="flex flex-wrap gap-2">
+            {project.technologies.devops.map((tech: string) => (
+              <Badge variant="outline">{tech}</Badge>
+            ))}
+          </div>
+        </div>
+      )}
+      {project.technologies.other && (
+        <div>
+          <h3 class="font-semibold mb-2 text-gray-600">{t('projects.other') || 'Other'}</h3>
+          <div class="flex flex-wrap gap-2">
+            {project.technologies.other.map((tech: string) => (
+              <Badge variant="outline">{tech}</Badge>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  </ShadcnCard>
+
+  <!-- Retos y desafíos -->
+  <ShadcnCard class="p-6 mb-8">
+    <h2 class="text-2xl font-bold mb-4">{t('projects.challenges') || 'Challenges'}</h2>
+    <ul class="space-y-3">
+      {project.challenges[lang].map((challenge: string) => (
+        <li class="flex items-start gap-3">
+          <span class="text-orange-500 mt-1">⚡</span>
+          <span class="text-muted-foreground">{challenge}</span>
+        </li>
+      ))}
+    </ul>
+  </ShadcnCard>
+
+  <!-- Video del proyecto -->
+  {project.videoUrl && (
+    <ShadcnCard class="p-6 mb-8">
+      <h2 class="text-2xl font-bold mb-4">{t('projects.videoDemo') || 'Video Demo'}</h2>
+      <div class="aspect-video">
+        <iframe
+          src={project.videoUrl}
+          class="w-full h-full rounded-lg"
+          allowfullscreen
+        ></iframe>
+      </div>
+      {project.videoDescription && (
+        <p class="text-muted-foreground mt-4">{project.videoDescription[lang]}</p>
+      )}
+    </ShadcnCard>
+  )}
+</div>
