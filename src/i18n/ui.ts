@@ -69,7 +69,7 @@ export const ui = {
     'contacts.header': '¡Contáctame!',
     'contacts.ctaLine':
       'Trabajemos juntos: respondo rápido por correo o LinkedIn.',
-    'footer.p1': '© {currentYear} KALG · Desarrollador Full Stack con pasión',
+    'footer.p1': '© {currentYear} KALG · Desarrollador Web FullStack',
     'footer.p2.builtWith': 'Construido con',
     'footer.p2.templateBy': 'Plantilla creada por',
     'footer.p2.sourceCode': 'Código fuente disponible en',
@@ -153,7 +153,7 @@ export const ui = {
     'contacts.subtitle2': 'Social Media',
     'contacts.header': "Let's work together",
     'contacts.ctaLine': 'Reach out via email or LinkedIn; I respond quickly.',
-    'footer.p1': '© {currentYear} KALG · Passionate Full Stack Developer',
+    'footer.p1': '© {currentYear} KALG · Web FullStack Developer',
     'footer.p2.builtWith': 'Built with',
     'footer.p2.templateBy': 'Template created by',
     'footer.p2.sourceCode': 'Source code available on',
